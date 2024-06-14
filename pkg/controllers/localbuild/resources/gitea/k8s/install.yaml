@@ -41,6 +41,9 @@ stringData:
   session: |-
     PROVIDER=memory
     PROVIDER_CONFIG=
+  webhook: |-
+    ALLOWED_HOST_LIST=*
+    SKIP_TLS_VERIFY=true
 ---
 # Source: gitea/templates/gitea/config.yaml
 apiVersion: v1
@@ -414,7 +417,7 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/config: 9b7b5c7586d38c5c0feeb0c69191c8fbdb6bfac258ad125dd26b9a125ed67173
+        checksum/config: 3eec61cf19b8beb26072eeddd03ffb4248bb572deef32e113d14725236c299bc
       labels:
         helm.sh/chart: gitea-10.1.4
         app: gitea
